@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./Statistics.module.css";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const generateItemColor = (min, max) => {
   const itemColor = `rgb(
@@ -30,6 +30,16 @@ const Statistics = ({ stats, title }) => {
       </ul>
     </section>
   );
+};
+
+Statistics.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
 
 export default Statistics;
