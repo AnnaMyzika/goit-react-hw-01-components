@@ -4,13 +4,13 @@ import React from "react";
 import friends from "./data/friends.json";
 import user from "./data/user.json";
 import data from "./data/statistical-data.json";
-// import transactions from "./data/transaction.json";
+import transactions from "./data/transactions.json";
 
 // components
 import FriendList from "./components/FriendList/FriendList";
 import Profile from "./components/Profile/Profile";
 import Statistics from "./components/Statistics/Statistics";
-// import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
       <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
       <FriendList friends={friends} />
+      <TransactionHistory transactions={transactions} />
     </div>
   );
 }
